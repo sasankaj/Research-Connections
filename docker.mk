@@ -51,9 +51,13 @@ up:
 	@echo "Starting up containers for $(PROJECT_NAME)..."
 	docker-compose pull
 	docker-compose up -d --remove-orphans
+#	@echo ""
+#	@echo ""
+#	@echo "Your app has started up correctly. Please allow a few moments for us to sync your host into the container"
+#	docker-compose -f ~/Projects/traefik.yml up -d
 	@echo ""
 	@echo ""
-	@echo "${green} Your app is now available at: http://$(PROJECT_BASE_URL) ${NC}"
+	@echo "${green} Your app is now available at: http://$(PROJECT_BASE_URL):8080 ${NC}"
 
 
 
@@ -127,28 +131,74 @@ logs:
 %:
 	@:
 
+## db_export :	Export your current database to the mariadb-init directory.
+db_export:
+	docker-compose exec mariadb sh -c 'exec mysqldump -uroot -p"password" drupal9_rc' > ./mariadb-init/rc9_db_backup.sql
+
+## db_import :	Import the new database from the mariadb-init directory.
+db_import:
+	docker-compose exec mariadb sh -c 'exec mysql -u root -p"password" drupal9_rc < /docker-entrypoint-initdb.d/rc9_db_backup.sql'
+
 build:
-	@echo "${green_bg} Step 1${NC}${green} Checking hosts file ${NC}"
+	@echo "${green_bg} Step 1${NC}${green} Starting Containers ${NC}"
 	@echo ""
-	sh ./manage_hosts.sh addhost $(PROJECT_BASE_URL)
-	@echo ""
-	@echo ""
-	@echo "${green_bg} Step 2${NC}${green} Starting Containers ${NC}"
-	@echo ""
-	make up
-	@echo ""
-	@echo ""
-	@echo "${green_bg} Step 3${NC}${green} Install Composer dependencies ${NC}"
+	docker-compose pull
+	docker-compose up -d --remove-orphans
+#	docker-compose -f ~/Projects/traefik.yml up -d
+	@echo "${green_bg} Step 2${NC}${green} Install Composer dependencies ${NC}"
 	@echo ""
 	make composer install
 	@echo ""
 	@echo ""
-#	@echo "${green_bg} Step 4${NC}${green} Import Latest Database ${NC}"
-#	@echo ""
-#	make composer install
-#	@echo ""
-#	@echo ""
+	@echo "${green_bg} Step 3${NC}${green} Import Latest Database ${NC}"
+	@echo ""
+	make db_import
+	@echo ""
+	@echo ""
 	@echo "${green_bg} Step 4${NC}${green} Clear Site Cache ${NC}"
+	@echo ""
+	make drush cr
+	@echo ""
+	@echo ""
+	@echo "${green} Your app is now available at: http://$(PROJECT_BASE_URL):8080 ${NC}"
+
+
+rebuild:
+	@echo "${green_bg} Step 1${NC}${green} Remove existing containers ${NC}"
+	@echo ""
+	make prune
+	@echo ""
+	@echo ""
+	@echo "${green_bg} Step 2${NC}${green} Pull Latest changes from git ${NC}"
+	@echo ""
+	git pull
+	@echo ""
+	@echo ""
+	@echo "${green_bg} Step 3${NC}${green} Checking hosts file ${NC}"
+	@echo ""
+	sh ./manage_hosts.sh addhost $(PROJECT_BASE_URL)
+	@echo ""
+	@echo ""
+	@echo "${green_bg} Step 4${NC}${green} Starting Containers ${NC}"
+	@echo ""
+	make up
+	@echo ""
+	@echo ""
+	@echo "${green_bg} Step 5${NC}${green} Install Composer dependencies ${NC}"
+	@echo ""
+	make composer install
+	@echo ""
+	@echo ""
+	@echo "${green_bg} Step 6${NC}${green} Import Latest Database ${NC}"
+	@echo ""
+	docker-compose exec mariadb sh -c 'exec mysql -u root -p"password" drupal9_rc < /docker-entrypoint-initdb.d/rc9-db-backup.sql'
+	@echo ""
+	@echo ""
+	@echo "${green_bg} Step 7${NC}${green} Import Configuration files ${NC}"
+	@echo ""
+	@echo "Skipping config import.."
+	@echo ""
+	@echo "${green_bg} Step 8${NC}${green} Clear Site Cache ${NC}"
 	@echo ""
 	make drush cr
 	@echo ""

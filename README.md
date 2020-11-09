@@ -69,16 +69,17 @@ The services currently enabled on the site are:
 
 To get this project running on your machine, use the following instructions
 
-Clone this repository to your local machine into the directory Research-Connections
+Clone this repository to your local machine into the directory researchconnections
 ```
-git clone git@github.com:sasankaj/Research-Connections.git Research-Connections
+git clone git@github.com:sasankaj/Research-Connections.git researchconnections
 ```
 
-Download the drupal settings file for local development from [here](https://icfonline.sharepoint.com/sites/ResearchConnections16/Shared%20Documents/General/Development/Local%20Dev/Local%20Settings/settings.local.php). and place it into the /web/sites/default/ directory of your project. 
+Download the drupal settings file for local development from [here](https://icfonline.sharepoint.com/sites/ResearchConnections16/Shared%20Documents/General/Development/Local%20Dev/Local%20Settings/settings.local.php), and place it into the /web/sites/default/ directory of your project. 
 
 
-Download the local services.yml file for local development (twig debug) from [here](https://icfonline.sharepoint.com/sites/ResearchConnections16/Shared%20Documents/General/Development/Local%20Dev/Local%20Settings/local.services.yml). and place it into the /web/sites/ directory of your project. 
+Download the local services.yml file for local development (twig debug) from [here](https://icfonline.sharepoint.com/sites/ResearchConnections16/Shared%20Documents/General/Development/Local%20Dev/Local%20Settings/local.services.yml), and place it into the /web/sites/ directory of your project. 
 
+Download git commit hook from [here](https://icfonline.sharepoint.com/sites/ResearchConnections16/Shared%20Documents/General/Development/Local%20Dev/git%20hooks/commit-msg), and place it into the .git/hooks directory of your project. Then make sure the newly added hook has 755 permissions (-rwxr-xr-x)
 
 Intiialize docker containers
 ```
@@ -92,7 +93,7 @@ make composer install
 
 Import the latest database backup.
 ```
-docker-compose exec mariadb sh -c 'exec mysql -u root -p"password" drupal9_rc < /docker-entrypoint-initdb.d/rc9-db-backup.sql'
+docker-compose exec mariadb sh -c 'exec mysql -u root -p"password" drupal9_rc < /docker-entrypoint-initdb.d/rc9_db_backup.sql'
 ```
 
 Import the latest configuration files into the site
@@ -110,22 +111,16 @@ make drush cr
 
 ## Database import and export
 
-Exporting all databases:
-
-```
-docker-compose exec mariadb sh -c 'exec mysqldump --all-databases -uroot -p"password"' > alldatabases.sql
-```
-
 Exporting your Drupal database:
 
 ```
-docker-compose exec mariadb sh -c 'exec mysqldump -uroot -p"root-password" drupal9_rc' > rc9-db-backup.sql
+docker-compose exec mariadb sh -c 'exec mysqldump -uroot -p"password" drupal9_rc' > ./mariadb-init/rc9_db_backup.sql
 ```
 
 Importing a database:
 
 ```
-docker-compose exec mariadb sh -c 'exec mysql -u root -p"password" drupal9_rc < /docker-entrypoint-initdb.d/rc9-db-backup.sql'
+docker-compose exec mariadb sh -c 'exec mysql -u root -p"password" drupal9_rc < /docker-entrypoint-initdb.d/rc9_db_backup.sql'
 ```
 
 
@@ -165,7 +160,7 @@ Once you are done working on your local code/configuration changes, please test 
 When you are ready to commit your changes and you have add your changes to the staging area, your commit message should satisfy the following requirements:
 
 ```
-> Contain the project prefix (RC9) followed by a hyphen
+> Contain the project prefix (RC) followed by a hyphen
 > Contain a ticket number followed by a colon and a space
 > Be at least 15 characters long and end with a period.
 > Valid example: RC9-2409: Updated behat configuration.
