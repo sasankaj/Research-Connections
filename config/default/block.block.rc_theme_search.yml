@@ -1,0 +1,23 @@
+uuid: bc189896-16b9-485c-bf55-fa3a38344ff3
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - rc_theme
+_core:
+  default_config_hash: J_c8-npZhKach5t7jVeF4RpQ4y_0mhSPlrD1qJUkpbw
+id: rc_theme_search
+theme: rc_theme
+region: secondary_menu
+weight: 10
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: Search
+  provider: search
+  label_display: visible
+  page_id: ''
+visibility: {  }

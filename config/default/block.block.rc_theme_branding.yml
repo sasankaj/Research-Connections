@@ -1,0 +1,25 @@
+uuid: b6c70619-4d4f-43c3-b07d-be7fb34594b3
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - rc_theme
+_core:
+  default_config_hash: fuauF-iGt5veiPnrp0hI7CSyKIypYPFaWXARxA_rMLo
+id: rc_theme_branding
+theme: rc_theme
+region: header
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }

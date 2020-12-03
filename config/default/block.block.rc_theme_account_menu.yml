@@ -1,0 +1,27 @@
+uuid: ada669d4-c2d7-4d2e-93ae-16cad91fbb3a
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - rc_theme
+_core:
+  default_config_hash: greIiiW91WbIbdxjUty-R1EZVgBW0Gh3ukfan4iEVZY
+id: rc_theme_account_menu
+theme: rc_theme
+region: secondary_menu
+weight: 0
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'User account menu'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 1
+  expand_all_items: false
+visibility: {  }

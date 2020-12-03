@@ -1,0 +1,25 @@
+uuid: 2d15686f-8ef9-406c-b95c-d2cee7648aa0
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - uswds_base
+_core:
+  default_config_hash: IJF_eLwbn6KTglHTcea1DdcER6eH90I1gf5UUWNtERE
+id: uswds_base_branding
+theme: uswds_base
+region: header
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }
