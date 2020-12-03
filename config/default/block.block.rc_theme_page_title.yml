@@ -1,0 +1,20 @@
+uuid: e27e0212-cfaf-4312-9226-168f7ed404b8
+langcode: en
+status: true
+dependencies:
+  theme:
+    - rc_theme
+_core:
+  default_config_hash: UvaDBaX1pJl4xnAwt3dAi90K-VWFgC9vo2eX1MSq4Fk
+id: rc_theme_page_title
+theme: rc_theme
+region: content
+weight: 0
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

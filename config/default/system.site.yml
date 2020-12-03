@@ -1,0 +1,14 @@
+uuid: 228a1b44-e383-49c2-a362-ea6608fce11f
+name: 'Research Connections'
+mail: Sasanka.Jandhyala@icfnext.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yTxtFqBHnEWxQswuWvkjE8mKw2t8oKuCL1q8KnfHuGE
