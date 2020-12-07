@@ -1,0 +1,19 @@
+uuid: f106ec38-bf5e-43d5-9db9-ef3e10434ad3
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_basic_page_meta
+field_name: field_basic_page_meta
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
