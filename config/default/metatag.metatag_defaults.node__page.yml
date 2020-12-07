@@ -1,0 +1,11 @@
+uuid: 44c6a256-891b-4ca5-b3d8-b764bb1c8b54
+langcode: en
+status: true
+dependencies: {  }
+id: node__page
+label: 'Content: Basic page'
+tags:
+  title: '[node:title] | [site:name]'
+  description: '[node:field_basic_page_meta]'
+  twitter_cards_description: '[node:field_basic_page_meta]'
+  twitter_cards_title: '[node:title] | [site:name]'
