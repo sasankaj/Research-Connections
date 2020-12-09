@@ -160,15 +160,20 @@ services:
     labels:
     - "traefik.http.routers.${PROJECT_NAME}_pma.rule=Host(`pma.${PROJECT_BASE_URL}`)"
 
-#  solr:
-#    image: wodby/solr:$SOLR_TAG
-#    container_name: "${PROJECT_NAME}_solr"
-#    environment:
-#      SOLR_DEFAULT_CONFIG_SET: $SOLR_CONFIG_SET
-#      SOLR_HEAP: 1024m
-#    labels:
-#    - "traefik.http.services.${PROJECT_NAME}_solr.loadbalancer.server.port=8983"
-#    - "traefik.http.routers.${PROJECT_NAME}_solr.rule=Host(`solr.${PROJECT_BASE_URL}`)"
+  solr:
+    image: wodby/solr:$SOLR_TAG
+    container_name: "${PROJECT_NAME}_solr"
+    environment:
+      SOLR_DEFAULT_CONFIG_SET: $SOLR_CONFIG_SET
+      SOLR_HEAP: 1024m
+    command:
+      - solr-precreate
+      - default
+    volumes:
+      - ./solr:/opt/solr/server/solr
+    labels:
+      - "traefik.http.services.${PROJECT_NAME}_solr.loadbalancer.server.port=8983"
+      - "traefik.http.routers.${PROJECT_NAME}_solr.rule=Host(`solr.${PROJECT_BASE_URL}`)"
 
 #  drupal-node:
 #    image: wodby/drupal-node:$DRUPAL_NODE_TAG
@@ -200,14 +205,15 @@ services:
 #  node:
 #    image: wodby/node:$NODE_TAG
 #    container_name: "${PROJECT_NAME}_node"
-#    working_dir: /var/www/html/path/to/theme/to/build
+#    working_dir: /var/www/html/web/themes/custom/rc_theme
 #    labels:
-#    - "traefik.http.services.${PROJECT_NAME}_node.loadbalancer.server.port=3000"
-#    - "traefik.http.routers.${PROJECT_NAME}_node.rule=Host(`node.${PROJECT_BASE_URL}`)"
+#      - "traefik.http.services.${PROJECT_NAME}_node.loadbalancer.server.port=3000"
+#      - "traefik.http.routers.${PROJECT_NAME}_node.rule=Host(`node.${PROJECT_BASE_URL}`)"
 #    expose:
-#    - "3000"
+#      - "3000"
 #    volumes:
-#    - ./:/var/www/html
+#      - ./:/var/www/html
+##    command: npm install
 #    command: sh -c 'yarn install && yarn run start'
 
 #  blackfire:
