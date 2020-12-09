@@ -32,3 +32,5 @@ content:
 hidden:
   field_basic_page_meta: true
   field_meta: true
+  langcode: true
+  search_api_excerpt: true
