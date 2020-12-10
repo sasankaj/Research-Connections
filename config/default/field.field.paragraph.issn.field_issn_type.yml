@@ -1,0 +1,29 @@
+uuid: b16db5dc-be87-48e3-8275-1352e7715aba
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_issn_type
+    - paragraphs.paragraphs_type.issn
+    - taxonomy.vocabulary.issn_type
+id: paragraph.issn.field_issn_type
+field_name: field_issn_type
+entity_type: paragraph
+bundle: issn
+label: 'ISSN Type'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      issn_type: issn_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,8 @@
+uuid: 4d80dbe1-8309-4acb-8417-0208261da5dc
+langcode: en
+status: true
+dependencies: {  }
+name: 'ISBN Type'
+vid: isbn_type
+description: ''
+weight: 0

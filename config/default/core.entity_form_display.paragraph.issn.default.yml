@@ -1,0 +1,30 @@
+uuid: e46e3b54-460c-4cf8-b913-31b00d2ddf52
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.issn.field_issn_number
+    - field.field.paragraph.issn.field_issn_type
+    - paragraphs.paragraphs_type.issn
+id: paragraph.issn.default
+targetEntityType: paragraph
+bundle: issn
+mode: default
+content:
+  field_issn_number:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_issn_type:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+hidden:
+  created: true
+  status: true

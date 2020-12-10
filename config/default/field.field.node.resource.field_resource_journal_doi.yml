@@ -1,0 +1,19 @@
+uuid: 9beeb4b0-0d45-4bbf-a2c5-e8f3a92ff041
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resource_journal_doi
+    - node.type.resource
+id: node.resource.field_resource_journal_doi
+field_name: field_resource_journal_doi
+entity_type: node
+bundle: resource
+label: 'Journal DOI'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

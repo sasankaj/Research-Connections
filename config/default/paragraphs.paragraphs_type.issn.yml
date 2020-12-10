@@ -1,0 +1,10 @@
+uuid: 6e7e8a44-36c1-4b0e-831a-d90794a9a97f
+langcode: en
+status: true
+dependencies: {  }
+id: issn
+label: ISSN
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

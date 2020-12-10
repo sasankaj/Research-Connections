@@ -1,0 +1,23 @@
+uuid: fefcdd3b-8826-4065-9b28-48c7982d8ac2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_journal_listed_discover
+    - node.type.journal
+id: node.journal.field_journal_listed_discover
+field_name: field_journal_listed_discover
+entity_type: node
+bundle: journal
+label: 'Listed in Discover'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

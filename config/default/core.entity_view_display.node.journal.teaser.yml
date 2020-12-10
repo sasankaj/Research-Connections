@@ -1,0 +1,38 @@
+uuid: 6ac5c45b-2128-489e-9ae4-dbb1bf711737
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.journal.field_journal_alternate_title
+    - field.field.node.journal.field_journal_full_text_avail
+    - field.field.node.journal.field_journal_issn
+    - field.field.node.journal.field_journal_listed_discover
+    - field.field.node.journal.field_journal_note
+    - field.field.node.journal.field_journal_peer_reviewed
+    - field.field.node.journal.field_journal_priority
+    - field.field.node.journal.field_journal_publication_freq
+    - field.field.node.journal.field_journal_site
+    - node.type.journal
+  module:
+    - user
+id: node.journal.teaser
+targetEntityType: node
+bundle: journal
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_journal_alternate_title: true
+  field_journal_full_text_avail: true
+  field_journal_issn: true
+  field_journal_listed_discover: true
+  field_journal_note: true
+  field_journal_peer_reviewed: true
+  field_journal_priority: true
+  field_journal_publication_freq: true
+  field_journal_site: true

@@ -1,0 +1,29 @@
+uuid: 59553ba0-86f3-43be-b30f-36f661a531cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resource_journal_title
+    - node.type.journal
+    - node.type.resource
+id: node.resource.field_resource_journal_title
+field_name: field_resource_journal_title
+entity_type: node
+bundle: resource
+label: 'Journal Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      journal: journal
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

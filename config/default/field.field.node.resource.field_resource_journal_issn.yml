@@ -1,0 +1,31 @@
+uuid: 787e61dd-5ec9-475a-a87f-a8cae063a558
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resource_journal_issn
+    - node.type.resource
+    - paragraphs.paragraphs_type.issn
+  module:
+    - entity_reference_revisions
+id: node.resource.field_resource_journal_issn
+field_name: field_resource_journal_issn
+entity_type: node
+bundle: resource
+label: 'Journal ISSN'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      issn: issn
+    target_bundles_drag_drop:
+      issn:
+        enabled: true
+        weight: 2
+field_type: entity_reference_revisions

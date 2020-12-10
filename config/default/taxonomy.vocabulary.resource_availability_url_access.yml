@@ -1,0 +1,8 @@
+uuid: 4d6ea677-b9fa-4315-805b-a6ebd1e8d304
+langcode: en
+status: true
+dependencies: {  }
+name: 'Resource Availability URL Access'
+vid: resource_availability_url_access
+description: ''
+weight: 0

@@ -1,0 +1,20 @@
+uuid: 6ed22f27-9de6-4263-ae1f-bb5fe0f1674e
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_journal_publication_freq
+field_name: field_journal_publication_freq
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

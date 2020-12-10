@@ -1,0 +1,19 @@
+uuid: 7b617adc-bd16-4eb1-a006-955421a9ac6b
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_resource_internal_notes
+field_name: field_resource_internal_notes
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

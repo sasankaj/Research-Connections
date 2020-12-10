@@ -1,0 +1,8 @@
+uuid: da746bf6-7ed7-451e-8ca6-e27c39ce0d3e
+langcode: en
+status: true
+dependencies: {  }
+name: 'Resource DC Type'
+vid: resource_dc_type
+description: ''
+weight: 0

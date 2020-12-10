@@ -1,0 +1,30 @@
+uuid: 1f206425-c44f-4577-bb91-210405e2e3f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.issn.field_issn_number
+    - field.field.paragraph.issn.field_issn_type
+    - paragraphs.paragraphs_type.issn
+id: paragraph.issn.default
+targetEntityType: paragraph
+bundle: issn
+mode: default
+content:
+  field_issn_number:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_issn_type:
+    weight: 1
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden: {  }

@@ -1,0 +1,19 @@
+uuid: 9ebc6592-b781-4eba-9d09-0898fde70df8
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_journal_full_text_avail
+field_name: field_journal_full_text_avail
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

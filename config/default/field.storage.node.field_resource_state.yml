@@ -1,0 +1,19 @@
+uuid: f9e3a027-8d4e-4cb0-941b-64ccffda6760
+langcode: en
+status: true
+dependencies:
+  module:
+    - address
+    - node
+id: node.field_resource_state
+field_name: field_resource_state
+entity_type: node
+type: address
+settings: {  }
+module: address
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

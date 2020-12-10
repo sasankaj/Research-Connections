@@ -1,0 +1,20 @@
+uuid: 60dce100-e6c3-4a00-b0b5-e7e7b03950ce
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_resource_rights_access
+field_name: field_resource_rights_access
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

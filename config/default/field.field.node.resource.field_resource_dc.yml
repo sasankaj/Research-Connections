@@ -1,0 +1,29 @@
+uuid: a5df15f0-f5a0-4f64-ada9-b076dc281665
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resource_dc
+    - node.type.resource
+    - taxonomy.vocabulary.resource_dc_type
+id: node.resource.field_resource_dc
+field_name: field_resource_dc
+entity_type: node
+bundle: resource
+label: 'DC Type'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      resource_dc_type: resource_dc_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

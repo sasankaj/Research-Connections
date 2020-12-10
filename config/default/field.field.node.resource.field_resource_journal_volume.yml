@@ -1,0 +1,19 @@
+uuid: 1b9424e7-2417-4d38-acdb-624065eef448
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resource_journal_volume
+    - node.type.resource
+id: node.resource.field_resource_journal_volume
+field_name: field_resource_journal_volume
+entity_type: node
+bundle: resource
+label: 'Journal Volume Number'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

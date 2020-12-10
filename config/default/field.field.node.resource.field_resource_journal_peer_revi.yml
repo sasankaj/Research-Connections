@@ -1,0 +1,23 @@
+uuid: f4d1209c-a008-46b1-b1a8-450cefe2fc7f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resource_journal_peer_revi
+    - node.type.resource
+id: node.resource.field_resource_journal_peer_revi
+field_name: field_resource_journal_peer_revi
+entity_type: node
+bundle: resource
+label: 'Journal Peer Reviewed'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

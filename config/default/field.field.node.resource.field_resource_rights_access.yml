@@ -1,0 +1,33 @@
+uuid: a0e415ed-e162-4c0a-b3cf-320c8d6bfce7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resource_rights_access
+    - node.type.resource
+    - taxonomy.vocabulary.resource_rights_access
+  content:
+    - 'taxonomy_term:resource_rights_access:4f552c99-f6f1-4260-985d-ff06473807e4'
+id: node.resource.field_resource_rights_access
+field_name: field_resource_rights_access
+entity_type: node
+bundle: resource
+label: 'Rights Access'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    target_uuid: 4f552c99-f6f1-4260-985d-ff06473807e4
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      resource_rights_access: resource_rights_access
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

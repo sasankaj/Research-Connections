@@ -1,0 +1,21 @@
+uuid: 0374719f-9519-4a6b-ac25-511221259d88
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_journal_full_text_avail
+    - node.type.journal
+  module:
+    - text
+id: node.journal.field_journal_full_text_avail
+field_name: field_journal_full_text_avail
+entity_type: node
+bundle: journal
+label: 'Full Text Availability'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

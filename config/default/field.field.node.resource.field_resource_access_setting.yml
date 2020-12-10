@@ -1,0 +1,33 @@
+uuid: e4505bac-22a5-4bc8-a9e8-31594e9b2113
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resource_access_setting
+    - node.type.resource
+    - taxonomy.vocabulary.resource_access_setting
+  content:
+    - 'taxonomy_term:resource_access_setting:ad446fdb-1107-4114-ab13-dd3aa26de902'
+id: node.resource.field_resource_access_setting
+field_name: field_resource_access_setting
+entity_type: node
+bundle: resource
+label: 'Access Setting'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    target_uuid: ad446fdb-1107-4114-ab13-dd3aa26de902
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      resource_access_setting: resource_access_setting
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

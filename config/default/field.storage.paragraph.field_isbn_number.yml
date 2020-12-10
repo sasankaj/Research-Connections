@@ -1,0 +1,21 @@
+uuid: 5a163220-3c14-4bbe-92cb-8a18d1ee3fe3
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_isbn_number
+field_name: field_isbn_number
+entity_type: paragraph
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

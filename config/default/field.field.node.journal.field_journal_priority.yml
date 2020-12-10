@@ -1,0 +1,29 @@
+uuid: 04327d79-4757-44be-9ee7-1d78103e7208
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_journal_priority
+    - node.type.journal
+    - taxonomy.vocabulary.priority
+id: node.journal.field_journal_priority
+field_name: field_journal_priority
+entity_type: node
+bundle: journal
+label: Priority
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      priority: priority
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

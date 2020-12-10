@@ -1,0 +1,23 @@
+uuid: 13df7cb5-d0c8-4c5a-a198-d03f751ccc04
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resource_journal_boolean
+    - node.type.resource
+id: node.resource.field_resource_journal_boolean
+field_name: field_resource_journal_boolean
+entity_type: node
+bundle: resource
+label: Journal
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

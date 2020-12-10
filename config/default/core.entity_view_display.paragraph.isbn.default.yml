@@ -1,0 +1,30 @@
+uuid: 92c0c804-d0d5-4cbe-924e-9c23912622cd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.isbn.field_isbn_number
+    - field.field.paragraph.isbn.field_isbn_type
+    - paragraphs.paragraphs_type.isbn
+id: paragraph.isbn.default
+targetEntityType: paragraph
+bundle: isbn
+mode: default
+content:
+  field_isbn_number:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_isbn_type:
+    weight: 1
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden: {  }

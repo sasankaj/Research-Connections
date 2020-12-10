@@ -1,0 +1,34 @@
+uuid: 01b3ae05-e429-49b7-8cb3-e38091e4f1af
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resource_isbn
+    - node.type.resource
+    - paragraphs.paragraphs_type.isbn
+  module:
+    - entity_reference_revisions
+id: node.resource.field_resource_isbn
+field_name: field_resource_isbn
+entity_type: node
+bundle: resource
+label: ISBN
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      isbn: isbn
+    target_bundles_drag_drop:
+      isbn:
+        enabled: true
+        weight: 3
+      issn:
+        weight: 4
+        enabled: false
+field_type: entity_reference_revisions

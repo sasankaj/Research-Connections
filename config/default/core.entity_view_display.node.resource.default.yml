@@ -1,0 +1,277 @@
+uuid: 67d9b172-cff4-402b-98e8-8fa602365c6f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.resource.field_meta
+    - field.field.node.resource.field_resource_access_level
+    - field.field.node.resource.field_resource_access_setting
+    - field.field.node.resource.field_resource_additional_note
+    - field.field.node.resource.field_resource_alt_title
+    - field.field.node.resource.field_resource_availability_url
+    - field.field.node.resource.field_resource_country
+    - field.field.node.resource.field_resource_date_issued
+    - field.field.node.resource.field_resource_date_issued_alt
+    - field.field.node.resource.field_resource_dc
+    - field.field.node.resource.field_resource_description
+    - field.field.node.resource.field_resource_file_upload
+    - field.field.node.resource.field_resource_internal_notes
+    - field.field.node.resource.field_resource_isbn
+    - field.field.node.resource.field_resource_journal_boolean
+    - field.field.node.resource.field_resource_journal_doi
+    - field.field.node.resource.field_resource_journal_issn
+    - field.field.node.resource.field_resource_journal_issue
+    - field.field.node.resource.field_resource_journal_notes
+    - field.field.node.resource.field_resource_journal_page
+    - field.field.node.resource.field_resource_journal_peer_revi
+    - field.field.node.resource.field_resource_journal_title
+    - field.field.node.resource.field_resource_journal_volume
+    - field.field.node.resource.field_resource_language
+    - field.field.node.resource.field_resource_meta
+    - field.field.node.resource.field_resource_rights_access
+    - field.field.node.resource.field_resource_source
+    - field.field.node.resource.field_resource_state
+    - field.field.node.resource.field_resource_type
+    - node.type.resource
+  module:
+    - address
+    - datetime
+    - entity_reference_revisions
+    - file
+    - link
+    - metatag
+    - text
+    - user
+id: node.resource.default
+targetEntityType: node
+bundle: resource
+mode: default
+content:
+  field_meta:
+    weight: 27
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+    region: content
+  field_resource_access_level:
+    weight: 18
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_resource_access_setting:
+    weight: 1
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_resource_additional_note:
+    weight: 19
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_resource_alt_title:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_resource_availability_url:
+    weight: 17
+    label: above
+    settings:
+      trim_length: null
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_resource_country:
+    weight: 25
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: address_default
+    region: content
+  field_resource_date_issued:
+    weight: 4
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_resource_date_issued_alt:
+    weight: 5
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_resource_dc:
+    weight: 21
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_resource_description:
+    weight: 24
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_resource_file_upload:
+    weight: 23
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_default
+    region: content
+  field_resource_isbn:
+    type: entity_reference_revisions_entity_view
+    weight: 16
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_resource_journal_boolean:
+    weight: 6
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_resource_journal_doi:
+    weight: 13
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_resource_journal_issn:
+    type: entity_reference_revisions_entity_view
+    weight: 8
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_resource_journal_issue:
+    weight: 10
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_resource_journal_notes:
+    weight: 12
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_resource_journal_page:
+    weight: 11
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_resource_journal_peer_revi:
+    weight: 14
+    label: above
+    settings:
+      format: default
+      format_custom_true: ''
+      format_custom_false: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_resource_journal_title:
+    weight: 7
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_resource_journal_volume:
+    weight: 9
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_resource_language:
+    weight: 20
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_resource_rights_access:
+    weight: 22
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_resource_source:
+    weight: 15
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_resource_state:
+    weight: 26
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: address_default
+    region: content
+  field_resource_type:
+    weight: 2
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_resource_internal_notes: true
+  field_resource_meta: true

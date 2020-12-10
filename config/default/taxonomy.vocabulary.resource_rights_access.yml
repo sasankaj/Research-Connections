@@ -1,0 +1,8 @@
+uuid: e315876c-1c0a-4b96-884c-09f7a32b650d
+langcode: en
+status: true
+dependencies: {  }
+name: 'Resource Rights Access'
+vid: resource_rights_access
+description: ''
+weight: 0

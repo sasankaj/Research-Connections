@@ -1,0 +1,19 @@
+uuid: 4c10d9b2-9943-4bff-a00d-fc5856e87f02
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resource_journal_issue
+    - node.type.resource
+id: node.resource.field_resource_journal_issue
+field_name: field_resource_journal_issue
+entity_type: node
+bundle: resource
+label: 'Journal Issue Number'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

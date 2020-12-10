@@ -1,0 +1,104 @@
+uuid: 08c91594-72c6-4ab7-a731-f71e97be1ad1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.journal.field_journal_alternate_title
+    - field.field.node.journal.field_journal_full_text_avail
+    - field.field.node.journal.field_journal_issn
+    - field.field.node.journal.field_journal_listed_discover
+    - field.field.node.journal.field_journal_note
+    - field.field.node.journal.field_journal_peer_reviewed
+    - field.field.node.journal.field_journal_priority
+    - field.field.node.journal.field_journal_publication_freq
+    - field.field.node.journal.field_journal_site
+    - node.type.journal
+  module:
+    - entity_reference_revisions
+    - text
+    - user
+id: node.journal.default
+targetEntityType: node
+bundle: journal
+mode: default
+content:
+  field_journal_alternate_title:
+    weight: 101
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_journal_full_text_avail:
+    weight: 104
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_journal_issn:
+    type: entity_reference_revisions_entity_view
+    weight: 102
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_journal_listed_discover:
+    weight: 110
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_journal_note:
+    weight: 109
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_journal_peer_reviewed:
+    weight: 106
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_journal_priority:
+    weight: 108
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_journal_publication_freq:
+    weight: 107
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_journal_site:
+    weight: 105
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

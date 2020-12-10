@@ -1,0 +1,21 @@
+uuid: 56fea41f-48a5-4e6b-bca3-e0cb292b2063
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_journal_site
+    - node.type.journal
+  module:
+    - text
+id: node.journal.field_journal_site
+field_name: field_journal_site
+entity_type: node
+bundle: journal
+label: 'Journal Site'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

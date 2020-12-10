@@ -1,0 +1,33 @@
+uuid: 56d5578e-3096-4b11-b9c2-e3d464a3c447
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resource_language
+    - node.type.resource
+    - taxonomy.vocabulary.resource_language
+  content:
+    - 'taxonomy_term:resource_language:6673fac0-2d43-412c-a401-39c0c811ec7d'
+id: node.resource.field_resource_language
+field_name: field_resource_language
+entity_type: node
+bundle: resource
+label: Language
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: 6673fac0-2d43-412c-a401-39c0c811ec7d
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      resource_language: resource_language
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

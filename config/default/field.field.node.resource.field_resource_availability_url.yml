@@ -1,0 +1,23 @@
+uuid: 49e126c3-77cc-4596-bb12-b43e67e5e7cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resource_availability_url
+    - node.type.resource
+  module:
+    - link
+id: node.resource.field_resource_availability_url
+field_name: field_resource_availability_url
+entity_type: node
+bundle: resource
+label: 'Availability URL'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link

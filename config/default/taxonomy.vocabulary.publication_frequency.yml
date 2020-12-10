@@ -1,0 +1,8 @@
+uuid: 33c33002-d87f-4009-89e7-8e81b739cb02
+langcode: en
+status: true
+dependencies: {  }
+name: 'Publication Frequency'
+vid: publication_frequency
+description: ''
+weight: 0

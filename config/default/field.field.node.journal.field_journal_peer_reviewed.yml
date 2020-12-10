@@ -1,0 +1,23 @@
+uuid: b7310586-f369-4615-bebd-4f146c219231
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_journal_peer_reviewed
+    - node.type.journal
+id: node.journal.field_journal_peer_reviewed
+field_name: field_journal_peer_reviewed
+entity_type: node
+bundle: journal
+label: 'Peer Reviewed'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

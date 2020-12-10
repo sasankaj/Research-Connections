@@ -1,0 +1,33 @@
+uuid: 3d25993c-5898-44ad-86da-08899fa03f6a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_isbn_type
+    - paragraphs.paragraphs_type.isbn
+    - taxonomy.vocabulary.isbn_type
+  content:
+    - 'taxonomy_term:isbn_type:853261bb-3f41-481e-ac54-2061e50a0c15'
+id: paragraph.isbn.field_isbn_type
+field_name: field_isbn_type
+entity_type: paragraph
+bundle: isbn
+label: 'ISBN Type'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: 853261bb-3f41-481e-ac54-2061e50a0c15
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      isbn_type: isbn_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

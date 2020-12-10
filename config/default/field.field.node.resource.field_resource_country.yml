@@ -1,0 +1,61 @@
+uuid: 7e388c21-ab48-4ad5-bfa0-138d6d73cb28
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resource_country
+    - node.type.resource
+  module:
+    - address
+id: node.resource.field_resource_country
+field_name: field_resource_country
+entity_type: node
+bundle: resource
+label: Country
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    langcode: ''
+    country_code: US
+    administrative_area: ''
+    locality: null
+    dependent_locality: null
+    postal_code: null
+    sorting_code: null
+    address_line1: null
+    address_line2: null
+    organization: null
+    given_name: null
+    additional_name: null
+    family_name: null
+default_value_callback: ''
+settings:
+  available_countries: {  }
+  langcode_override: ''
+  field_overrides:
+    givenName:
+      override: hidden
+    additionalName:
+      override: hidden
+    familyName:
+      override: hidden
+    organization:
+      override: hidden
+    addressLine1:
+      override: hidden
+    addressLine2:
+      override: hidden
+    postalCode:
+      override: hidden
+    sortingCode:
+      override: hidden
+    dependentLocality:
+      override: hidden
+    locality:
+      override: hidden
+    administrativeArea:
+      override: hidden
+  fields: {  }
+field_type: address

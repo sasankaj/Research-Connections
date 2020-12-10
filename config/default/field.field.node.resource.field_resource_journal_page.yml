@@ -1,0 +1,19 @@
+uuid: 74a2f5db-9c12-4bf9-9fa2-fa72ea243d46
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resource_journal_page
+    - node.type.resource
+id: node.resource.field_resource_journal_page
+field_name: field_resource_journal_page
+entity_type: node
+bundle: resource
+label: 'Journal Page Range'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

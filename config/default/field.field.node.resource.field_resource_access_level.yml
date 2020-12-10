@@ -1,0 +1,33 @@
+uuid: 3e521cc5-7904-4650-a384-7548444795fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resource_access_level
+    - node.type.resource
+    - taxonomy.vocabulary.resource_availability_url_access
+  content:
+    - 'taxonomy_term:resource_availability_url_access:93da25d5-102b-4668-b609-38d64da721e2'
+id: node.resource.field_resource_access_level
+field_name: field_resource_access_level
+entity_type: node
+bundle: resource
+label: 'Access Level'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    target_uuid: 93da25d5-102b-4668-b609-38d64da721e2
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      resource_availability_url_access: resource_availability_url_access
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,21 @@
+uuid: d67fa08c-2a2f-41fd-9ba8-6866cd7aa805
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_journal_note
+    - node.type.journal
+  module:
+    - text
+id: node.journal.field_journal_note
+field_name: field_journal_note
+entity_type: node
+bundle: journal
+label: Note
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

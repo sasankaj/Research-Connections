@@ -1,0 +1,8 @@
+uuid: 4490bba5-e886-4f5f-bc56-97c2b77af848
+langcode: en
+status: true
+dependencies: {  }
+name: 'ISSN Type'
+vid: issn_type
+description: ''
+weight: 0

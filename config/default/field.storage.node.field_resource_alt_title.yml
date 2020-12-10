@@ -1,0 +1,21 @@
+uuid: bfe1c757-45be-4de5-ac14-b826251a7536
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_resource_alt_title
+field_name: field_resource_alt_title
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

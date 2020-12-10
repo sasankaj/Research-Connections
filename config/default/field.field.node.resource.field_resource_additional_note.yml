@@ -1,0 +1,21 @@
+uuid: 77eb53be-62a8-4939-a438-68ea77524cd1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resource_additional_note
+    - node.type.resource
+  module:
+    - text
+id: node.resource.field_resource_additional_note
+field_name: field_resource_additional_note
+entity_type: node
+bundle: resource
+label: Note
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
